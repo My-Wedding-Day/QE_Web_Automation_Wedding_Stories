@@ -25,8 +25,8 @@ public class LoginUserPage extends PageObject {
     WebElement loginUser;
 
     public void loginAccount(){
-        inputEmailLogin.sendKeys("testqecoba1234@gmail.com");
-        inputPasswordLogin.sendKeys("testqecoba1234");
+        inputEmailLogin.sendKeys("testqecoba12345@mail.com");
+        inputPasswordLogin.sendKeys("testqecoba12");
     }
     public void clickLoginUser(){
         loginUser.click();

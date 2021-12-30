@@ -3,21 +3,22 @@ package starter.steps;
 import starter.pages.registerUserPage;
 
 public class RegisterUserSteps {
-    registerUserPage registerUserPage;
+    registerUserPage registeruserpage;
 
     public void openHomePage(){
-        registerUserPage.open();
+        registeruserpage.open();
+
     }
     public void openRegisterPage(){
-        registerUserPage.clickButtonDaftar();
+        registeruserpage.clickButtonDaftar();
     }
     public void inputValidRegister(){
-        registerUserPage.registerAccount();
+        registeruserpage.registerAccount();
     }
     public void clickSignUp(){
-        registerUserPage.clickDaftarUser();
+        registeruserpage.clickDaftarUser();
     }
     public void successSignUp(){
-        registerUserPage.validasiDaftarUser();
+        registeruserpage.validasiDaftarUser();
     }
 }

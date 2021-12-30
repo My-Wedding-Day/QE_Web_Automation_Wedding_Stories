@@ -2,15 +2,12 @@ package starter.pages;
 
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.PageObject;
-import org.jruby.util.Pack;
 import org.junit.Assert;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class UserCreateReservationPage extends PageObject {
+
     //Web Elemet Pre-Condition
     @FindBy(xpath = "//a[@id='signIn-button-user']")
     WebElement btnMasuk;
@@ -48,57 +45,59 @@ public class UserCreateReservationPage extends PageObject {
         Assert.assertEquals("iniuser", validateUsername.getText());
     }
 
-    @FindBy(xpath = "//body/div[@id='root']/div[@class='list-wo container-list-wo']/div[@class='container']/div[@class='row-card my-5']/div[1]/div[1]")
+    @FindBy(xpath = "//body/div[@id='root']/div[@class='list-wo container-list-wo']/div[@class='container']/div[@class='row-card my-5']/div[9]/div[1]")
     WebElement Package;
 
-    public void clickPackage(){
-//        Package.sendKeys(Keys.PAGE_DOWN);
-//        element(Package).waitUntilVisible();
-//        waitForCondition().until(ExpectedConditions.elementToBeClickable(Package));
+    public void clickPackage() {
+
         try {
             Package.click();
         } catch (Exception e) {
             e.printStackTrace();
         }
-            Package.click();
+        Package.click();
     }
-    @FindBy (xpath = "//h3[@id='wo-name']")
+
+    @FindBy(xpath = "//h3[@id='wo-name']")
     WebElement validateWO;
 
-    public void setValidateWO(){
+    public void setValidateWO() {
         waitForCondition().until(ExpectedConditions.elementToBeClickable(validateWO));
         Assert.assertTrue(validateWO.isDisplayed());
     }
+
     @FindBy(xpath = "//input[@id='custom-pax']")
     WebElement inputCustomPax;
 
-    public void setInputCustomPax(){
+    public void setInputCustomPax() {
         inputCustomPax.sendKeys("600");
     }
 
     @FindBy(xpath = "//input[@id='date-order']")
     WebElement chooseDate;
 
-    public void setChooseDate(){
+    public void setChooseDate() {
         chooseDate.click();
     }
 
-    @FindBy (xpath = "//div[@aria-label='Choose Saturday, January 1st, 2022']")
+    @FindBy(xpath = "//div[@aria-label='Choose Saturday, January 1st, 2022']")
     WebElement selectDate;
 
-    public void setSelectDate(){
+    public void setSelectDate() {
         selectDate.click();
     }
-@FindBy(xpath = "//textarea[@id='additional']")
+
+    @FindBy(xpath = "//textarea[@id='additional']")
     WebElement inputText;
-    public void setInputText(){
+
+    public void setInputText() {
         inputText.sendKeys("aku mau booking dengan crew yang profesional dan bertanggung jawab");
     }
 
     @FindBy(xpath = "//button[@id='order-button']")
     WebElement btnOrder;
 
-    public void clickOrder(){
+    public void clickOrder() {
         btnOrder.click();
     }
 

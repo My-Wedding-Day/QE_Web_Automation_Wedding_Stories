@@ -10,4 +10,5 @@ Feature: payment Order User
     When I input valid email and valid password and the click login
     When I redirected to Home Page and go to History Order
     When I click payment
-    Then I redirected to upload valid payment
+    When I upload valid payment "C:\Users\Asus\QE_Web_Automation_Wedding_Stories\src\test\resources\Payment\validPayment.jpg"
+    Then I succes upload valid payment
