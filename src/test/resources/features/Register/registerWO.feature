@@ -6,8 +6,8 @@ Feature: Register functionality in Web Wedding Stories
 
   Scenario: Register with valid data and complete
     Given I am open register Wedding Organizer page
-    When I enter Bussiness Name ininamawo
-    And I enter Email iniwo12@gmail.com
+    When I enter Bussiness Name ini nama wo
+    And I enter Email iniwo13@gmail.com
     And I am enter Address jl jalan doang
     And I am choose city Jakarta
     And I am enter Phone Number 08190909090

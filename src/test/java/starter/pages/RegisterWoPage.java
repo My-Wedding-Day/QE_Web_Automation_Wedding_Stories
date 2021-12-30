@@ -47,7 +47,7 @@ public class RegisterWoPage extends PageObject {
     WebElement inputFieldEmail;
 
     public void setInputFieldEmail() {
-        inputFieldEmail.sendKeys("iniwo13@gmail.com");
+        inputFieldEmail.sendKeys("iniwo11@gmail.com");
     }
     public void setInputFieldEmail(String InvalidEmail){
         inputFieldEmail.sendKeys(InvalidEmail);
@@ -61,11 +61,15 @@ public class RegisterWoPage extends PageObject {
         inputAddress.sendKeys("Jl Mulu jadian kagak");
     }
 
-    @FindBy(xpath = "//option[normalize-space()='Jakarta']")
+    @FindBy(xpath = "//option[@value='Jakarta']")
     WebElement chooseCity;
 
     public void setChooseCity() {
-        chooseCity.click();
+        try {
+            chooseCity.click();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }chooseCity.click();
     }
 
     @FindBy(xpath = "//div[5]//input[1]")

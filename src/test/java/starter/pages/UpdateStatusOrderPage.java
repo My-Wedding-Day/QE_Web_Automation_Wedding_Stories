@@ -84,7 +84,7 @@ public class UpdateStatusOrderPage extends PageObject {
         waitForCondition().until(ExpectedConditions.elementToBeClickable(validateOrder));
         Assert.assertTrue(validateOrder.isDisplayed());
     }
-    @FindBy(xpath = "//div[4]//div[1]//h2[1]//button[1]")
+    @FindBy(xpath = "//div[@class='list-reserve']//div[2]//div[1]//h2[1]//button[1]")
     WebElement detailPackge;
     public void setDetailPackge(){
         detailPackge.click();

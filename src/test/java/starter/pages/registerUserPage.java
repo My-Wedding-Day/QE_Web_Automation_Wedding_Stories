@@ -7,30 +7,36 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class registerUserPage extends PageObject {
-    @FindBy(xpath = "//a[normalize-space()='Daftar']")
+
+    @FindBy(xpath = "//a[@id='signUp-button-user']")
     WebElement buttonDaftar;
 
-    public void clickButtonDaftar(){
-        waitForCondition().until(ExpectedConditions.elementToBeClickable(buttonDaftar));
+    public void clickButtonDaftar() {
+        try {
+            buttonDaftar.click();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         buttonDaftar.click();
     }
 
-    @FindBy(xpath = "//input[@placeholder='username']")
+
+    @FindBy(xpath = "//input[@id='form-username-user']")
     WebElement inputUsername;
 
-    @FindBy(xpath = "//input[@placeholder='Email']")
+    @FindBy(xpath = "//input[@id='form-email-user']")
     WebElement inputEmail;
 
     @FindBy(xpath = "//input[@id='form-password-user']")
     WebElement inputPassword;
 
-    @FindBy(xpath = "//button[normalize-space()='Sign up']")
+    @FindBy(xpath = "//button[@id='SignUp-user']")
     WebElement daftarUser;
 
     public void registerAccount(){
-        inputUsername.sendKeys("testqecoba12345");
-        inputEmail.sendKeys("testqecoba12345@gmail.com");
-        inputPassword.sendKeys("testqecoba12345");
+        inputUsername.sendKeys("testqecoba1");
+        inputEmail.sendKeys("testqecoba12345@mail.com");
+        inputPassword.sendKeys("testqecoba12");
     }
     public void clickDaftarUser(){
         daftarUser.click();

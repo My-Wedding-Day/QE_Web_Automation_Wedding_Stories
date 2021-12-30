@@ -8,10 +8,11 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         plugin = {"pretty"},
         features = "src/test/resources/features/",
-        tags = "@CreateReservation"
+        tags = "@deletepackage"
 )
-public class TestSuite {
+public class TestSuite{
 }
 
-//As a User : @RegisterUser, @LoginUser , @ProfileUser , @CreateReservation , @listOrder , @paymentuser
-//As a WO : @RegisterWO , @LoginWO , @addpackage ,  @updatestatusorder
+//As a User: @RegisterUser, @LoginUser , @ProfileUser , @CreateReservation , @listOrder , @paymentuser
+//As a WO: @RegisterWO , @LoginWO , @addpackage ,  @updatestatusorder
+//As a Admin: @adminApprove

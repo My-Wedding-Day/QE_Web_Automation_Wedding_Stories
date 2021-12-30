@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class LoginWOPage extends PageObject {
+
     //web element pre-condition
     @FindBy(xpath = "//*[@id=\"navbar-logo-bef-login\"]")
     WebElement iconVirus;

@@ -20,12 +20,12 @@ public class RegisterWO {
     }
 
     //REGISTER SUCCESSFULLY
-    @When("I enter Bussiness Name ininamawo")
-    public void i_enter_Bussiness_Name_ininamawo() {
+    @When("I enter Bussiness Name ini nama wo")
+    public void i_enter_Bussiness_Name_ini_nama_wo() {
         registerWOSteps.inputvalidBussinessName();
     }
 
-    @When("I enter Email iniwo12@gmail.com")
+    @When("I enter Email iniwo13@gmail.com")
     public void i_enter_Email_iniwo_gmail_com() {
         registerWOSteps.validEmail();
 

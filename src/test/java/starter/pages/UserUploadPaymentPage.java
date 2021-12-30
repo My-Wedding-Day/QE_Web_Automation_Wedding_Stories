@@ -6,7 +6,7 @@ import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class paymentUserPage extends PageObject {
+public class UserUploadPaymentPage extends PageObject {
 
     //Web Elemet Pre-Condition
     @FindBy(xpath = "//img[@id='navbar-logo-bef-login']")
@@ -55,7 +55,12 @@ public class paymentUserPage extends PageObject {
     WebElement drpDwn;
 
     public void setDrpDwn() {
-        drpDwn.click();
+
+        try {
+            drpDwn.click();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } drpDwn.click();
     }
 
     @FindBy(xpath = "//a[@id='history-menu-user']")
@@ -74,5 +79,35 @@ public class paymentUserPage extends PageObject {
         Assert.assertTrue(validateProfilWO.isDisplayed());
     }
 
+    @FindBy(xpath = "//body/div[@id='root']/div[@class='list-reservasi']/div[@class='mt-5 mb-5 container']/div[2]/div[1]/h2[1]/button[1]/div[1]/div[1]")
+    WebElement drpdwnPayment;
+
+    public void setDrpdwnPayment() {
+        try {
+            drpdwnPayment.click();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FindBy(xpath = "//div[@class='accordion-collapse collapse show']//button[@id='user-payment']")
+    WebElement payment;
+
+    public void setPayment(){
+        payment.click();
+    }
+    @FindBy(xpath = "//body[1]/div[17]/div[1]/div[1]/div[2]/form[1]/input[1]")
+    WebElement uploadPayment;
+
+    public void setUploadPayment(String filename){
+        upload(filename).to(uploadPayment);
+    }
+
+    @FindBy(xpath = "//body/div[17]/div[1]/div[1]/div[2]/form[1]/div[1]/button[1]")
+    WebElement submit;
+
+    public void setSubmit(){
+        submit.click();
+    }
 }
 
